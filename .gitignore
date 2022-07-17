@@ -9,6 +9,8 @@
 .history
 .svn/
 migrate_working_dir/
+/macos/
+/windows/
 
 # IntelliJ related
 *.iml
@@ -45,3 +47,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Env files
+.env
+
+# Ios Pod Files
+/ios/Podfile*
+/android/app/build/
+
+# Exclude Flutter SDK symbolic link
+.fvm/flutter_sdk

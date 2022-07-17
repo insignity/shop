@@ -59,6 +59,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `мир`
+  String get world {
+    return Intl.message(
+      'мир',
+      name: 'world',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `АппБар`
+  String get AppBar {
+    return Intl.message(
+      'АппБар',
+      name: 'AppBar',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
