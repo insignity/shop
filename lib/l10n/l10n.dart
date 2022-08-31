@@ -70,10 +70,10 @@ class AppLocalizations {
     );
   }
 
-  /// `АппБар`
+  /// `IRCN Shop`
   String get AppBar {
     return Intl.message(
-      'АппБар',
+      'IRCN Shop',
       name: 'AppBar',
       desc: '',
       args: [],

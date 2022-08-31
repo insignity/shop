@@ -1,5 +1,6 @@
 {
+  "@@locale": "ru",
   "Hello": "Привет",
   "world": "мир",
-  "AppBar": "АппБар"
+  "AppBar": "IRCN Shop"
 }

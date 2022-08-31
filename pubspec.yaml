@@ -35,9 +35,15 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   intl: ^0.17.0 # Пакет для локализации
+  auto_route: ^5.0.1
+  lint: ^1.10.0
+  rename: ^2.0.1
 
 dev_dependencies:
+  auto_route_generator: ^5.0.2
   build_runner: ^2.2.0
+  flutter_launcher_icons: ^0.10.0
+  flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
 
@@ -46,12 +52,27 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/app_logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/app_logo.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/app_logo.png"
+    icon_size: 48 # min:48, max:256, default: 48
+
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
