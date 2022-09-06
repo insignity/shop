@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shop/l10n/l10n.dart';
-import 'package:shop/routing/router.gr.dart';
-import 'package:shop/utilities/extensions/context_shortcuts.dart';
+import 'package:shop/routing/router.dart';
+import 'package:shop/theming/app_themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,6 +10,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final _appRouter = AppRouter();
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -24,9 +25,7 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: AppLocalizations.delegate.supportedLocales,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppThemes.mobile,
     );
   }
 }

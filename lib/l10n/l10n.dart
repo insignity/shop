@@ -70,6 +70,56 @@ class AppLocalizations {
     );
   }
 
+  /// `Каталог`
+  String get Catalog {
+    return Intl.message(
+      'Каталог',
+      name: 'Catalog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Скидки`
+  String get Sales {
+    return Intl.message(
+      'Скидки',
+      name: 'Sales',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Корзина`
+  String get Basket {
+    return Intl.message(
+      'Корзина',
+      name: 'Basket',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Избранное`
+  String get Favorites {
+    return Intl.message(
+      'Избранное',
+      name: 'Favorites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Профиль`
+  String get Profile {
+    return Intl.message(
+      'Профиль',
+      name: 'Profile',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `IRCN Shop`
   String get AppBar {
     return Intl.message(

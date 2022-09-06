@@ -23,7 +23,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "AppBar": MessageLookupByLibrary.simpleMessage("IRCN Shop"),
+        "Basket": MessageLookupByLibrary.simpleMessage("Корзина"),
+        "Catalog": MessageLookupByLibrary.simpleMessage("Каталог"),
+        "Favorites": MessageLookupByLibrary.simpleMessage("Избранное"),
         "Hello": MessageLookupByLibrary.simpleMessage("Привет"),
+        "Profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+        "Sales": MessageLookupByLibrary.simpleMessage("Скидки"),
         "world": MessageLookupByLibrary.simpleMessage("мир")
       };
 }

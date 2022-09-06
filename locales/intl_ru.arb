@@ -2,5 +2,10 @@
   "@@locale": "ru",
   "Hello": "Привет",
   "world": "мир",
+  "Catalog": "Каталог",
+  "Sales": "Скидки",
+  "Basket": "Корзина",
+  "Favorites": "Избранное",
+  "Profile": "Профиль",
   "AppBar": "IRCN Shop"
 }

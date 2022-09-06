@@ -10,46 +10,122 @@
 //
 // ignore_for_file: type=lint
 
-import 'package:auto_route/auto_route.dart' as _i3;
-import 'package:flutter/material.dart' as _i4;
-import 'package:shop/pages/main/main_page.dart' as _i1;
-import 'package:shop/pages/profile/profile_page.dart' as _i2;
+part of 'router.dart';
 
-class AppRouter extends _i3.RootStackRouter {
-  AppRouter([_i4.GlobalKey<_i4.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+class _$AppRouter extends RootStackRouter {
+  _$AppRouter([GlobalKey<NavigatorState>? navigatorKey]) : super(navigatorKey);
 
   @override
-  final Map<String, _i3.PageFactory> pagesMap = {
+  final Map<String, PageFactory> pagesMap = {
     MainRoute.name: (routeData) {
-      return _i3.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i1.MainPage());
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const MainPage());
+    },
+    CatalogRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const CatalogPage());
+    },
+    DiscountsRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const DiscountsPage());
+    },
+    BasketRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const BasketPage());
+    },
+    FavoritesRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+          routeData: routeData, child: const FavoritesPage());
     },
     ProfileRoute.name: (routeData) {
-      return _i3.AdaptivePage<dynamic>(
-          routeData: routeData, child: const _i2.ProfilePage());
+      final args = routeData.argsAs<ProfileRouteArgs>();
+      return AdaptivePage<dynamic>(
+          routeData: routeData,
+          child: ProfilePage(key: args.key, string: args.string));
     }
   };
 
   @override
-  List<_i3.RouteConfig> get routes => [
-        _i3.RouteConfig(MainRoute.name, path: '/'),
-        _i3.RouteConfig(ProfileRoute.name, path: '/profile-page')
+  List<RouteConfig> get routes => [
+        RouteConfig(MainRoute.name, path: '/', children: [
+          RouteConfig('#redirect',
+              path: '',
+              parent: MainRoute.name,
+              redirectTo: 'catalog',
+              fullMatch: true),
+          RouteConfig(CatalogRoute.name,
+              path: 'catalog', parent: MainRoute.name),
+          RouteConfig(DiscountsRoute.name,
+              path: 'discounts', parent: MainRoute.name),
+          RouteConfig(BasketRoute.name, path: 'basket', parent: MainRoute.name),
+          RouteConfig(FavoritesRoute.name,
+              path: 'favorites', parent: MainRoute.name),
+          RouteConfig(ProfileRoute.name,
+              path: 'profile', parent: MainRoute.name)
+        ])
       ];
 }
 
 /// generated route for
-/// [_i1.MainPage]
-class MainRoute extends _i3.PageRouteInfo<void> {
-  const MainRoute() : super(MainRoute.name, path: '/');
+/// [MainPage]
+class MainRoute extends PageRouteInfo<void> {
+  const MainRoute({List<PageRouteInfo>? children})
+      : super(MainRoute.name, path: '/', initialChildren: children);
 
   static const String name = 'MainRoute';
 }
 
 /// generated route for
-/// [_i2.ProfilePage]
-class ProfileRoute extends _i3.PageRouteInfo<void> {
-  const ProfileRoute() : super(ProfileRoute.name, path: '/profile-page');
+/// [CatalogPage]
+class CatalogRoute extends PageRouteInfo<void> {
+  const CatalogRoute() : super(CatalogRoute.name, path: 'catalog');
+
+  static const String name = 'CatalogRoute';
+}
+
+/// generated route for
+/// [DiscountsPage]
+class DiscountsRoute extends PageRouteInfo<void> {
+  const DiscountsRoute() : super(DiscountsRoute.name, path: 'discounts');
+
+  static const String name = 'DiscountsRoute';
+}
+
+/// generated route for
+/// [BasketPage]
+class BasketRoute extends PageRouteInfo<void> {
+  const BasketRoute() : super(BasketRoute.name, path: 'basket');
+
+  static const String name = 'BasketRoute';
+}
+
+/// generated route for
+/// [FavoritesPage]
+class FavoritesRoute extends PageRouteInfo<void> {
+  const FavoritesRoute() : super(FavoritesRoute.name, path: 'favorites');
+
+  static const String name = 'FavoritesRoute';
+}
+
+/// generated route for
+/// [ProfilePage]
+class ProfileRoute extends PageRouteInfo<ProfileRouteArgs> {
+  ProfileRoute({Key? key, required String string})
+      : super(ProfileRoute.name,
+            path: 'profile', args: ProfileRouteArgs(key: key, string: string));
 
   static const String name = 'ProfileRoute';
+}
+
+class ProfileRouteArgs {
+  const ProfileRouteArgs({this.key, required this.string});
+
+  final Key? key;
+
+  final String string;
+
+  @override
+  String toString() {
+    return 'ProfileRouteArgs{key: $key, string: $string}';
+  }
 }
