@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "108715292384",
+    "project_id": "ircn-shop",
+    "storage_bucket": "ircn-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108715292384:android:fa9ee87c0def25a637c285",
+        "android_client_info": {
+          "package_name": "com.aiarsien.ircnshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108715292384-8es6eebss2ko0stuf2be51j9ttg5oonn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOo5DP7zUHr5hs3rATl9bosBj35kZe5ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108715292384-8es6eebss2ko0stuf2be51j9ttg5oonn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

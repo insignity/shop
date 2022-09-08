@@ -25,10 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "AppBar": MessageLookupByLibrary.simpleMessage("IRCN Shop"),
         "Basket": MessageLookupByLibrary.simpleMessage("Корзина"),
         "Catalog": MessageLookupByLibrary.simpleMessage("Каталог"),
+        "Discounts": MessageLookupByLibrary.simpleMessage("Скидки"),
         "Favorites": MessageLookupByLibrary.simpleMessage("Избранное"),
         "Hello": MessageLookupByLibrary.simpleMessage("Привет"),
         "Profile": MessageLookupByLibrary.simpleMessage("Профиль"),
-        "Sales": MessageLookupByLibrary.simpleMessage("Скидки"),
         "world": MessageLookupByLibrary.simpleMessage("мир")
       };
 }

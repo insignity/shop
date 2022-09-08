@@ -81,10 +81,10 @@ class AppLocalizations {
   }
 
   /// `Скидки`
-  String get Sales {
+  String get Discounts {
     return Intl.message(
       'Скидки',
-      name: 'Sales',
+      name: 'Discounts',
       desc: '',
       args: [],
     );

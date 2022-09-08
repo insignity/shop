@@ -17,6 +17,7 @@ class AppThemes {
     progressIndicatorTheme: ProgressIndicatorThemeData(
       color: AppColors.green.shade90,
     ),
+    primaryColor: AppColors.green.shade90,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: Colors.grey.shade50,
       selectedLabelStyle: AppTextTheme.mobile.badge,

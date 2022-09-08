@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shop/routing/router.dart';
 import 'package:shop/utilities/extensions/context_shortcuts.dart';
@@ -24,7 +25,7 @@ class _MainPageState extends State<MainPage> {
         const FavoritesRoute(),
         ProfileRoute(string: 'string')
       ],
-      builder: (context, child, __){
+      builder: (context, child, __) {
         return Scaffold(
           body: child,
           bottomNavigationBar: BottomNavigationBar(
@@ -35,16 +36,20 @@ class _MainPageState extends State<MainPage> {
               BottomNavigationBarItem(
                 icon: const Icon(Icons.newspaper),
                 label: context.$.Catalog,
-              ), BottomNavigationBarItem(
+              ),
+              BottomNavigationBarItem(
                 icon: const Icon(Icons.percent),
-                label: context.$.Sales,
-              ), BottomNavigationBarItem(
+                label: context.$.Discounts,
+              ),
+              BottomNavigationBarItem(
                 icon: const Icon(Icons.shopping_basket),
                 label: context.$.Basket,
-              ), BottomNavigationBarItem(
+              ),
+              BottomNavigationBarItem(
                 icon: const Icon(Icons.favorite),
                 label: context.$.Favorites,
-              ), BottomNavigationBarItem(
+              ),
+              BottomNavigationBarItem(
                 icon: const Icon(Icons.person),
                 label: context.$.Profile,
               ),
